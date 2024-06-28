@@ -751,39 +751,32 @@ Boxplot (ящиковые диаграммы)
     console.log(lesson, target);
 
     if (target == 3) {
-      const info = document.querySelector('.main__info');
-      if (info) {
-          info.remove();
+      // const info = document.querySelector('.main__info');
+      // if (info) {
+        //  info.remove();
+      //}
+
+      var second = document.querySelector('.main__block2');
+      if (second) {
+        second.remove();
+      }
+      var tre = document.querySelector('.main__block3');
+      if (tre) {
+        tre.remove();
       }
 
-      const contentEl = document.querySelector('.main__content');
+      var tittle = document.querySelector('.main__block > div:nth-child(1)');
+      if (tittle) {
+        tittle.textContent = content[Object.keys(content)[lesson]].tittle;
+      }
+      var textt = document.querySelector('.main__text2');
+      if (textt) {
+        textt.textContent = content[Object.keys(content)[lesson]].teory;
+      }
+
+      const contentEl = document.querySelector('.main__block');
       if (contentEl) {
-        var block = document.createElement('div');
-        block.classList.add('main__block4');
-        var tittle = document.createElement('div');
-        tittle.classList.add('main__tittle2');
-        tittle.innerText = content[Object.keys(content)[lesson].tittle];
-        var text = document.createElement('div');
-        text.classList.add('main__text2');
-        text.innerText = content[Object.keys(content)[lesson]].teory;
-        block.appendChild(tittle);
-        block.appendChild(text);
-        var card = document.createElement('div');
-        card.classList.add('main__card');
-        card.appendChild(block);
-
-      }
-
-      <div class="main__block4">
-              <div class="main__tittle2">123132</div>
-              <div class="main__text2">123123</div>
-            </div>
-
-
-        contentEl.appendChild(card);
-        contentEl.style.visibility = 'visible';
-        document.querySelector('.main__tittle2').innerText = content[Object.keys(content)[lesson].tittle];
-        document.querySelector('.main__text2').textContent = content[Object.keys(content)[lesson]].teory;
+        contentEl.style.background = '#e1ded0;';
       }
 
     }
