@@ -1,0 +1,763 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+.main,
+.main * {
+  box-sizing: border-box;
+}
+.main {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+.main__header {
+  background: #ffffff;
+  padding: 0rem 1.125rem 0rem 1.125rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 120rem;
+  height: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.main__logo {
+  flex-shrink: 0;
+  width: 12.125rem;
+  height: 4.375rem;
+  position: relative;
+  object-fit: cover;
+}
+.main__gap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  width: 15.0625rem;
+  position: relative;
+}
+.main__mid {
+  padding: 0.625rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.main__tittle {
+  padding: 0.625rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.main__text {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: relative;
+}
+.main__author-block {
+  padding: 0.625rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.main__name {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  position: relative;
+}
+.main__stick {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  position: relative;
+}
+.main__email {
+  color: #676767;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  position: relative;
+}
+.main__body {
+  padding: 0.625rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.main__info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.375rem;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.main__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.main__block {
+  background: #fed74b;
+  border-radius: 0.5625rem;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.main__tittle2 {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+.main__text2 {
+  color: #000000;
+  text-align: center;
+  font-family: "LiberationMono-Regular", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+.main__block2 {
+  background: #66c9e9;
+  border-radius: 0.5625rem;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.main__text3 {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+.main__block3 {
+  background: #88eb8c;
+  border-radius: 0.5625rem;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.main__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.main__block4 {
+  background: #e1ded0;
+  border-radius: 0.5625rem;
+  display: flex;
+  padding: 0.75rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  width: 59.0625rem;
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+}
+.main__link-column {
+  padding: 0rem 0rem 0.625rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.main__sources {
+  background: #88eb8c;
+  border-radius: 0.5625rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.main__column-1 {
+  border-radius: 0.5625rem;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 29.0625rem;
+  position: relative;
+}
+.main__books {
+  padding: 0.625rem 0.875rem 0.625rem 0.875rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 27.5625rem;
+  height: 3.375rem;
+  position: relative;
+}
+.main__text4 {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  position: relative;
+}
+.main__gap2 {
+  align-self: stretch;
+  flex-shrink: 0;
+  width: 6.25rem;
+  position: relative;
+  overflow: hidden;
+}
+.main__button-1 {
+  background: #a5c6f9;
+  border-radius: 0.6875rem;
+  padding: 0.3125rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0.125rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  cursor: pointer;
+}
+.main__label {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  position: relative;
+}
+.main__button-2 {
+  background: #a5c6f9;
+  border-radius: 0.6875rem;
+  padding: 0.3125rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0.125rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  cursor: pointer;
+}
+.main__soft {
+  padding: 0.625rem 0.875rem 0.625rem 0.875rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 27.5625rem;
+  height: 3.375rem;
+  position: relative;
+}
+.main__gap3 {
+  align-self: stretch;
+  flex-shrink: 0;
+  width: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.main__button-12 {
+  background: #a5c6f9;
+  border-radius: 0.6875rem;
+  padding: 0.3125rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0.125rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  cursor: pointer;
+}
+.main__column-2 {
+  border-radius: 0.5625rem;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 29.0625rem;
+  position: relative;
+}
+.main__block5 {
+  padding: 2.625rem 10.3125rem 2.625rem 10.3125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.main__button {
+  background: #a5c6f9;
+  border-radius: 0.6875rem;
+  padding: 0.8125rem 0.9375rem 0.6875rem 0.9375rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.main__rows {
+  padding: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.main__row-0 {
+  padding: 0rem 1.375rem 0rem 1.375rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.main__lesson {
+  padding: 0.9375rem 3.9375rem 0.9375rem 3.9375rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 12.5rem;
+  height: 6.25rem;
+  position: relative;
+  overflow: hidden;
+}
+.main__text5 {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: relative;
+}
+.main__map {
+  padding: 0.9375rem 3.9375rem 0.9375rem 3.9375rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 12.5rem;
+  height: 6.25rem;
+  position: relative;
+  overflow: hidden;
+}
+.main__exercise {
+  padding: 1.375rem 1.25rem 1.375rem 1.25rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 12.5rem;
+  height: 6.25rem;
+  position: relative;
+  overflow: hidden;
+}
+.main__text6 {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: relative;
+  width: 7.625rem;
+}
+.main__target {
+  padding: 2.0625rem 2.25rem 2.0625rem 2.25rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 12.5rem;
+  height: 6.25rem;
+  position: relative;
+  overflow: hidden;
+}
+.main__text7 {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: relative;
+  width: 7.9375rem;
+}
+.main__row-1 {
+  padding: 0rem 1.375rem 0rem 1.375rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.main__button2 {
+  background: #d1dbda;
+  border-radius: 2.0625rem;
+  padding: 0.625rem 1.0625rem 0.625rem 1.0625rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+}
+.main__map2 {
+  padding: 1.375rem 1.25rem 1.375rem 1.25rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 12.5rem;
+  height: 6.25rem;
+  position: relative;
+  overflow: hidden;
+}
+.main__button3 {
+  background: #d1dbda;
+  border-radius: 22.5rem;
+  padding: 0.625rem 1.0625rem 0.625rem 1.0625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 3.125rem;
+  height: 3.125rem;
+  position: relative;
+  box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.main__label2 {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+.main__exercise2 {
+  padding: 2.0625rem 2.25rem 2.0625rem 2.25rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 12.5rem;
+  height: 6.25rem;
+  position: relative;
+  overflow: hidden;
+}
+.main__row-2 {
+  padding: 0rem 1.375rem 0rem 1.375rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.main__row-3 {
+  padding: 0rem 1.375rem 0rem 1.375rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.main__row-4 {
+  padding: 0rem 1.375rem 0rem 1.375rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.main__row-5 {
+  padding: 0rem 1.375rem 0rem 1.375rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.main__row-6 {
+  padding: 0rem 1.375rem 0rem 1.375rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.main__label3 {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  position: relative;
+}
+.main__row-7 {
+  padding: 0rem 1.375rem 0rem 1.375rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.main__row-8 {
+  padding: 0rem 1.375rem 0rem 1.375rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.main__row-9 {
+  padding: 0rem 1.375rem 0rem 1.375rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
