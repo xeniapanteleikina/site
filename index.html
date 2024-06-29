@@ -119,25 +119,25 @@
             <div class="main__books">
               <div class="main__text3">Учебники</div>
               <div class="main__gap"></div>
-              <div class="main__button-1">
-                <div class="main__label">7-9 класс</div>
+              <div onclick="btnClick2(0)" class="main__button-1">
+                <div onclick="btnClick2(0)" class="main__label">7-9 класс</div>
               </div>
-              <div class="main__button-2">
-                <div class="main__label">9 класс</div>
+              <div onclick="btnClick2(1)" class="main__button-2">
+                <div onclick="btnClick2(1)" class="main__label">9 класс</div>
               </div>
             </div>
             <div class="main__soft">
               <div class="main__text4">Программа</div>
               <div class="main__gap2"></div>
-              <div class="main__button-12">
-                <div class="main__label">Excel Microsoft 365</div>
+              <div onclick="btnClick2(2)" class="main__button-12">
+                <div onclick="btnClick2(2)" class="main__label">Excel Microsoft 365</div>
               </div>
             </div>
             <div class="main__soft">
               <div class="main__text3">Тематическое планирование</div>
               <div class="main__gap3"></div>
-              <div class="main__button-12">
-                <div class="main__label">Скачать</div>
+              <div onclick="btnClick2(3)" class="main__button-12">
+                <div onclick="btnClick2(3)" class="main__label">Скачать</div>
               </div>
             </div>
           </div>
@@ -768,10 +768,19 @@ Boxplot (ящиковые диаграммы)
     console.log(lesson, target);
     var lesson = content[Object.keys(content)[lesson]];
     window.location.assign(lesson[Object.keys(lesson)[target-1]]);
-
-
-
   }
+
+  var src = [
+      "https://lbz.ru/metodist/iumk/informatics/files/bosova-7-9-met.pdf",
+      "https://shcola2neman.gosuslugi.ru/netcat_files/30/50/Informatika_9_klass.pdf?ysclid=lxvz7275zd356713460",
+      "https://www.microsoft.com/ru-ru/microsoft-365/excel?market=ru",
+      "https://docs.google.com/document/d/1ByCfxbf--uEzC06IX1tv4aE_dAOmS92dY_S0LJoHe50/edit?usp=drive_link",
+    ]
+
+  function btnClick2(i) {
+    window.location.assign(src[i]);
+  }
+
 </script>
 
 
