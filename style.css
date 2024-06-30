@@ -85,6 +85,7 @@ select {
 
 
 
+
 .main,
 .main * {
   box-sizing: border-box;
@@ -511,7 +512,7 @@ select {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 12.5rem;
+  width: 12rem;
   height: 6.25rem;
   position: relative;
   overflow: hidden;
@@ -532,7 +533,7 @@ select {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 12.5rem;
+  width: 10rem;
   height: 6.25rem;
   position: relative;
   overflow: hidden;
@@ -545,7 +546,7 @@ select {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 12.5rem;
+  width: 10rem;
   height: 6.25rem;
   position: relative;
   overflow: hidden;
@@ -558,7 +559,7 @@ select {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 12.5rem;
+  width: 10rem;
   height: 6.25rem;
   position: relative;
   overflow: hidden;
